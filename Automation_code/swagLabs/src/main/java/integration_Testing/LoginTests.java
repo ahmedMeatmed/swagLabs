@@ -1,4 +1,4 @@
-package Testcases4;
+package integration_Testing;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Testcases4 {
+public class LoginTests {
     WebDriver d;
 
     @BeforeMethod

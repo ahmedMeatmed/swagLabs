@@ -1,4 +1,4 @@
-package tests;
+package TestCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -92,7 +92,7 @@ public class CheckoutTests {
         Thread.sleep(500);
     }
   @Test
-    public void testCheckout2() throws InterruptedException {
+    public void testCheckout4() throws InterruptedException {
        
         Thread.sleep(500);
         driver.findElement(By.id("continue")).click();
