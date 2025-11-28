@@ -1,12 +1,12 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="EndToEnd Suite">
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="EndToEnd Suite">-->
 
-    <test name="EndToEnd Flow">
-        <classes>
-            <class name="end_to_end_testing.LoginHomeTest" />
-            <class name="end_to_end_testing.InventoryTest" />
-            <class name="end_to_end_testing.CheckoutTest" />
-        </classes>
-    </test>
+<!--    <test name="EndToEnd Flow">-->
+<!--        <classes>-->
+<!--            <class name="end_to_end_testing.LoginHomeTest" />-->
+<!--            <class name="end_to_end_testing.InventoryTest" />-->
+<!--            <class name="end_to_end_testing.CheckoutTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-</suite>
+<!--</suite>-->

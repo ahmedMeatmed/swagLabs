@@ -16,9 +16,7 @@ public class LoginHomeTest extends BaseTest {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("bm-menu")));
         driver.findElement(By.id("react-burger-menu-btn")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("bm-menu")));
-
-        Assert.assertTrue(driver.findElement(By.className("bm-menu")).isDisplayed(),
-                "Menu did NOT open!");
+        Assert.assertTrue(driver.findElement(By.className("bm-menu")).isDisplayed(), "Menu did NOT open!");
     }
 
     public void closeSideBar() {
@@ -38,7 +36,7 @@ public class LoginHomeTest extends BaseTest {
 
     @Test(priority = 1)
     public void login(String username, String password) {
-
+        driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).clear();
         driver.findElement(By.id("user-name")).sendKeys(username);
 
@@ -48,11 +46,7 @@ public class LoginHomeTest extends BaseTest {
         driver.findElement(By.id("login-button")).click();
 
         // ASSERT: Login successful
-        Assert.assertEquals(
-                driver.getCurrentUrl(),
-                "https://www.saucedemo.com/inventory.html",
-                "Login failed for user: " + username
-        );
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html", "Login failed for user: " + username);
     }
 
     @Test(priority = 2)
@@ -76,6 +70,7 @@ public class LoginHomeTest extends BaseTest {
 
     @Test(priority = 4)
     public void testResetLink(String username, String password) {
+
         login(username, password);
         openSideBar();
 
@@ -95,6 +90,8 @@ public class LoginHomeTest extends BaseTest {
                 "About link did NOT open Sauce Labs site!");
         driver.navigate().to("https://www.saucedemo.com/inventory.html");
     }
-
-
+    @Test(dependsOnMethods = "testAboutLink")
+    public void delay(String username, String password) throws InterruptedException {
+        Thread.sleep(5000);   // 3-second delay BEFORE second test starts
+    }
 }

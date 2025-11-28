@@ -4,10 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -18,7 +15,7 @@ public class BaseTest {
     WebDriverWait wait;
 
 
-    @BeforeClass
+    @BeforeSuite
     public void setupDriver() {
         if (driver == null) {
             ChromeOptions options = new ChromeOptions();
@@ -37,8 +34,8 @@ public class BaseTest {
             driver = new ChromeDriver(options);
         }
     }
-    @BeforeSuite
-    public void beforeTest(){
+    @BeforeClass
+    public void beforeClass(){
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.get("https://www.saucedemo.com/");
     }
@@ -46,6 +43,7 @@ public class BaseTest {
     @AfterClass
     public void quitDriver() {
         // Quit only after all E2E classes are done
+        driver.quit();
 
     }
 }

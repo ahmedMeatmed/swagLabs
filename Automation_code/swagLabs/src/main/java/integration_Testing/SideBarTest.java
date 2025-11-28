@@ -61,7 +61,7 @@ public class SideBarTest {
     // LOGIN METHOD
     // -----------------------------
     public void login(String username, String password) {
-
+        driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).clear();
         driver.findElement(By.id("user-name")).sendKeys(username);
 
@@ -144,7 +144,6 @@ public class SideBarTest {
     public void testAboutLink(String username, String password) {
         login(username, password);
         openMenu();
-
         driver.findElement(By.id("about_sidebar_link")).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("saucelabs.com"),
                 "About link did NOT open Sauce Labs site!");

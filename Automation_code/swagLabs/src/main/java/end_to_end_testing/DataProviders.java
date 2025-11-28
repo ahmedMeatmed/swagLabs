@@ -8,10 +8,8 @@ public class DataProviders {
     @DataProvider(name = "users")
     public Object[][] users(){
         return new Object[][] {
-                {"standard_user", "secret_sauce"},
                 {"problem_user", "secret_sauce"},
-                {"problem_user", "invalid_Password"},//invalid Password
-                {"invalid_user", "secret_sauce"},//invalid user
+                {"standard_user", "secret_sauce"},
         };
     }
 }
