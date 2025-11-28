@@ -1,4 +1,4 @@
-package TestCases;
+package integration_Testing;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import TestCases.HomePage;
 
 public class HomeTests {
 

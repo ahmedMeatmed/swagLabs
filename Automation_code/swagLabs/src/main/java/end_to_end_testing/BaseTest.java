@@ -37,10 +37,9 @@ public class BaseTest {
     @BeforeClass
     public void beforeClass(){
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterClass
+    @AfterSuite
     public void quitDriver() {
         // Quit only after all E2E classes are done
         driver.quit();
