@@ -10,15 +10,10 @@ import java.util.List;  // For handling lists of elements
 @Test(dataProvider = "users", dataProviderClass = DataProviders.class)
 public class HomeProductCartTests extends BaseTest {
 
+    HomePage home = new HomePage(driver);
     // Test 1: Open detail page of first product, verify details, and add to cart
     @Test(priority = 1)
     public void ViewDetailPageAndAddFirstProduct(String username, String password) {
-//        driver.get("https://www.saucedemo.com/"); // Navigate to site
-
-        // Login using provided credentials
-//        driver.findElement(By.id("user-name")).sendKeys(username);
-//        driver.findElement(By.id("password")).sendKeys(password);
-//        driver.findElement(By.id("login-button")).click();
 
         HomePage home = new HomePage(driver); // Initialize HomePage object
 
@@ -51,7 +46,7 @@ public class HomeProductCartTests extends BaseTest {
     }
 
     // Test 2: Remove product from cart and verify cart count
-    @Test(dependsOnMethods = "ViewDetailPageAndAddFirstProduct", priority = 2)
+    @Test(dependsOnMethods = "ViewDetailPageAndAddFirstProduct", priority = 4)
     public void removeProductAndVerifyCart(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -76,7 +71,7 @@ public class HomeProductCartTests extends BaseTest {
     }
 
     // Test 3: Open detail page and add second product
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void ViewDetailPageAndAddSecondProduct(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -84,12 +79,12 @@ public class HomeProductCartTests extends BaseTest {
         home.getAllProductNames().get(1).click(); // Open detail page
 
         driver.findElement(By.tagName("button")).click(); // Add to cart
-        System.out.println(username + " added second product: " + name);
+//        System.out.println(username + " added second product: " + name);
         driver.findElement(By.id("back-to-products")).click(); // Back to products
     }
 
     // Test 4: Open detail page and add third product
-    @Test(priority = 4)
+    @Test(priority = 3)
     public void ViewDetailPageAndAddThirdProduct(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -97,17 +92,19 @@ public class HomeProductCartTests extends BaseTest {
         home.getAllProductNames().get(2).click();
 
         driver.findElement(By.tagName("button")).click(); // Add to cart
-        System.out.println(username + " added third product: " + name);
+//        System.out.println(username + " added third product: " + name);
         driver.findElement(By.id("back-to-products")).click();
     }
-    @Test(dependsOnMethods = "ViewDetailPageAndAddThirdProduct",priority = 5)
-    public void delay(String username, String password) throws InterruptedException {
-        Thread.sleep(5000);   // 3-second delay BEFORE second test starts
-    }
+//    @Test(dependsOnMethods = "ViewDetailPageAndAddThirdProduct",priority = 5)
+//    public void delay(String username, String password) throws InterruptedException {
+//        Thread.sleep(5000);   // 3-second delay BEFORE second test starts
+//    }
 
     // Test 5: Apply Low to High filter and verify first product
     @Test(priority = 6)
     public void FilterPriceLowToHighAndVerify(String username, String password) {
+        driver.get("https://www.saucedemo.com/inventory.html");
+
         HomePage home = new HomePage(driver);
 
         // Apply "Price: Low to High" filter
@@ -131,6 +128,7 @@ public class HomeProductCartTests extends BaseTest {
     // Test 6: Apply Z to A filter and verify first product
     @Test(priority = 7)
     public void FilterZToAAndVerify(String username, String password) {
+//        driver.get("https://www.saucedemo.com/inventory.html");
         HomePage home = new HomePage(driver);
 
         // Open sort dropdown and select Z to A
