@@ -14,6 +14,7 @@ public class CartCheckOutTests extends BaseTest {
         clickCheckout();
         fillUserInformation("Zeyad", "Lotfy", "12345");
         confirmOrder();
+        checkOut();
         validateCompletePage();
     }
 
@@ -26,7 +27,7 @@ public class CartCheckOutTests extends BaseTest {
         driver.findElement(By.id("continue")).click();
 
         String errorMsg = driver.findElement(By.className("error-message-container")).getText();
-        Assert.assertEquals(errorMsg, "Last Name is required", "Error message is WRONG!");
+        Assert.assertEquals(errorMsg, "Error: Last Name is required", "Error message is WRONG!");
     }
 
     // ---------------- Test 3: Missing Postal Code ----------------
@@ -38,7 +39,7 @@ public class CartCheckOutTests extends BaseTest {
         driver.findElement(By.id("continue")).click();
 
         String errorMsg = driver.findElement(By.className("error-message-container")).getText();
-        Assert.assertEquals(errorMsg, "Postal Code is required", "Error message is WRONG!");
+        Assert.assertEquals(errorMsg, "Error: Postal Code is required", "Error message is WRONG!");
     }
 
     // ---------------- Helper Methods ----------------
@@ -65,8 +66,14 @@ public class CartCheckOutTests extends BaseTest {
     }
 
     private void confirmOrder() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("continue")));
+        driver.findElement(By.id("continue")).click();
+    }
+
+    private void checkOut(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("finish")));
         driver.findElement(By.id("finish")).click();
+
     }
 
     private void validateCompletePage() {

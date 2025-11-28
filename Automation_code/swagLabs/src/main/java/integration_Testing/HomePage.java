@@ -8,10 +8,11 @@ import java.util.List;
 
 public class HomePage {
 
-    WebDriver driver;
+     WebDriver driver;
 
     // Constructor: initialize driver
     public HomePage(WebDriver driver) {
+
         this.driver = driver;
     }
 

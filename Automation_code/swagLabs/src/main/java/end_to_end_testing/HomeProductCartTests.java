@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;  // Selenium WebElement
 import java.util.List;  // For handling lists of elements
 
 // Test class for Home page product and cart functionalities
+@Test(dataProvider = "users", dataProviderClass = DataProviders.class)
 public class HomeProductCartTests extends BaseTest {
 
     // Test 1: Open detail page of first product, verify details, and add to cart
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 1)
+    @Test(priority = 1)
     public void ViewDetailPageAndAddFirstProduct(String username, String password) {
-        driver.get("https://www.saucedemo.com/"); // Navigate to site
+//        driver.get("https://www.saucedemo.com/"); // Navigate to site
 
         // Login using provided credentials
 //        driver.findElement(By.id("user-name")).sendKeys(username);
@@ -43,14 +44,14 @@ public class HomeProductCartTests extends BaseTest {
 
         // Add product to cart from detail page
         driver.findElement(By.tagName("button")).click();
-        System.out.println(username + " added first product to cart: " + homeName);
+//        System.out.println(username + " added first product to cart: " + homeName);
 
         // Go back to the products list
         driver.findElement(By.id("back-to-products")).click();
     }
 
     // Test 2: Remove product from cart and verify cart count
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, dependsOnMethods = "ViewDetailPageAndAddFirstProduct", priority = 2)
+    @Test(dependsOnMethods = "ViewDetailPageAndAddFirstProduct", priority = 2)
     public void removeProductAndVerifyCart(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -75,7 +76,7 @@ public class HomeProductCartTests extends BaseTest {
     }
 
     // Test 3: Open detail page and add second product
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 3)
+    @Test(priority = 3)
     public void ViewDetailPageAndAddSecondProduct(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -88,7 +89,7 @@ public class HomeProductCartTests extends BaseTest {
     }
 
     // Test 4: Open detail page and add third product
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 4)
+    @Test(priority = 4)
     public void ViewDetailPageAndAddThirdProduct(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -99,9 +100,13 @@ public class HomeProductCartTests extends BaseTest {
         System.out.println(username + " added third product: " + name);
         driver.findElement(By.id("back-to-products")).click();
     }
+    @Test(dependsOnMethods = "ViewDetailPageAndAddThirdProduct",priority = 5)
+    public void delay(String username, String password) throws InterruptedException {
+        Thread.sleep(5000);   // 3-second delay BEFORE second test starts
+    }
 
     // Test 5: Apply Low to High filter and verify first product
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 5)
+    @Test(priority = 6)
     public void FilterPriceLowToHighAndVerify(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -124,7 +129,7 @@ public class HomeProductCartTests extends BaseTest {
 
 
     // Test 6: Apply Z to A filter and verify first product
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 6)
+    @Test(priority = 7)
     public void FilterZToAAndVerify(String username, String password) {
         HomePage home = new HomePage(driver);
 
@@ -144,7 +149,7 @@ public class HomeProductCartTests extends BaseTest {
     }
 
     // Test 7: Reset app state and verify add-to-cart buttons
-    @Test(dataProvider = "users", dataProviderClass = DataProviders.class, priority = 7)
+    @Test(priority = 8)
     public void ResetAppState(String username, String password) {
         HomePage home = new HomePage(driver);
 
