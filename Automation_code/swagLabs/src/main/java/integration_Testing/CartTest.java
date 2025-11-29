@@ -1,6 +1,6 @@
 package integration_Testing;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -24,8 +24,6 @@ public class CartTest {
 
     @BeforeMethod
     public void beforeTest() throws InterruptedException {
-
-//        WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
