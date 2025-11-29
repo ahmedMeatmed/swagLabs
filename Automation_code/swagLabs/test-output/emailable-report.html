@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Default Suite</th></tr>
+<tr><td><a href="#t0">SideBarTest.java</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">6</td><td class="num">333,791</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SideBarTest.java &#8212; failed</th></tr><tr class="failedeven"><td rowspan="6">integration_Testing.SideBarTest</td><td><a href="#m0">closeMenu</a></td><td rowspan="1">1764442793525</td><td rowspan="1">7</td></tr><tr class="failedeven"><td><a href="#m1">openMenu</a></td><td rowspan="1">1764442804410</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m2">testAllItemsLink</a></td><td rowspan="1">1764442925658</td><td rowspan="1">1171</td></tr><tr class="failedeven"><td><a href="#m3">testLogOutLink</a></td><td rowspan="1">1764443125850</td><td rowspan="1">1202</td></tr><tr class="failedeven"><td><a href="#m4">testSideBarList</a></td><td rowspan="2">1764442828708</td><td rowspan="2">2313</td></tr><tr class="failedeven"><td><a href="#m5">testSideBarList</a></td></tr><tr><th colspan="4">SideBarTest.java &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">integration_Testing.SideBarTest</td><td><a href="#m6">login</a></td><td rowspan="2">1764442798488</td><td rowspan="2">490</td></tr><tr class="passedeven"><td><a href="#m7">login</a></td></tr><tr class="passedeven"><td><a href="#m8">testAboutLink</a></td><td rowspan="2">1764443046796</td><td rowspan="2">45685</td></tr><tr class="passedeven"><td><a href="#m9">testAboutLink</a></td></tr><tr class="passedeven"><td><a href="#m10">testAllItemsLink</a></td><td rowspan="1">1764442891731</td><td rowspan="1">1231</td></tr><tr class="passedeven"><td><a href="#m11">testLogOutLink</a></td><td rowspan="1">1764443109643</td><td rowspan="1">1267</td></tr><tr class="passedeven"><td><a href="#m12">testResetLink</a></td><td rowspan="2">1764442972127</td><td rowspan="2">1270</td></tr><tr class="passedeven"><td><a href="#m13">testResetLink</a></td></tr></tbody>
+</table>
+<h2>SideBarTest.java</h2><h3 id="m0">integration_Testing.SideBarTest#closeMenu</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void integration_Testing.SideBarTest.closeMenu()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: closeMenu([])
+Arguments: [(java.lang.String) standard_user,(java.lang.String) secret_sauce]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">integration_Testing.SideBarTest#openMenu</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void integration_Testing.SideBarTest.openMenu()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: openMenu([])
+Arguments: [(java.lang.String) standard_user,(java.lang.String) secret_sauce]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">integration_Testing.SideBarTest#testAllItemsLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ec020c776d64457ce1a830a5f5aef3a, clickElement {id=f.080D0A7F38D2CF112B3DCDA838D29AEF.d.5F2BBF433F9D0AE91EBFB414F4E2514E.e.26}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61290}, goog:processID: 1316, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61290/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1ec020c776d64457ce1a830a5f5aef3a)] -&gt; id: inventory_sidebar_link]
+Session ID: 1ec020c776d64457ce1a830a5f5aef3a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at integration_Testing.SideBarTest.testAllItemsLink(SideBarTest.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">integration_Testing.SideBarTest#testLogOutLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [96f39d5ed561acae8d17c59f80920076, clickElement {id=f.A0D107EEA39CC30074746AA629B807D9.d.73897578CF6CC8D818D6029104EFD3C2.e.26}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61656}, goog:processID: 3396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61656/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (96f39d5ed561acae8d17c59f80920076)] -&gt; id: logout_sidebar_link]
+Session ID: 96f39d5ed561acae8d17c59f80920076
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at integration_Testing.SideBarTest.testLogOutLink(SideBarTest.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">integration_Testing.SideBarTest#testSideBarList</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;bm-cross-button&quot; style=&quot;position: absolute; width: 24px; height: 24px; right: 8px; top: 8px;&quot;&gt;...&lt;/div&gt; is not clickable at point (107, 26). Other element would receive the click: &lt;div class=&quot;bm-menu&quot; style=&quot;height: 100%; box-sizing: border-box; overflow: auto;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ddea8f993995ae13719ae492954ad4e9, clickElement {id=f.0490D94F5BE43B1D9DB0B6827F326FC0.d.863DEC977270EEAFEE37F6E9FB347D3B.e.30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61172}, goog:processID: 13772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61172/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ddea8f993995ae13719ae492954ad4e9)] -&gt; class name: bm-cross-button]
+Session ID: ddea8f993995ae13719ae492954ad4e9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at integration_Testing.SideBarTest.closeMenu(SideBarTest.java:99)
+	at integration_Testing.SideBarTest.testSideBarList(SideBarTest.java:117)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">integration_Testing.SideBarTest#testSideBarList</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3672e25d0e2ad2e13e47a0d6deed556c, clickElement {id=f.29B2F24F9C76886680E43E09F4D39369.d.B5E3DF84B5327CA2E5A866AFA532D3F5.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61217}, goog:processID: 12648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61217/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3672e25d0e2ad2e13e47a0d6deed556c)] -&gt; class name: bm-cross-button]
+Session ID: 3672e25d0e2ad2e13e47a0d6deed556c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at integration_Testing.SideBarTest.closeMenu(SideBarTest.java:99)
+	at integration_Testing.SideBarTest.testSideBarList(SideBarTest.java:117)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">integration_Testing.SideBarTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">integration_Testing.SideBarTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">integration_Testing.SideBarTest#testAboutLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">integration_Testing.SideBarTest#testAboutLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">integration_Testing.SideBarTest#testAllItemsLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">integration_Testing.SideBarTest#testLogOutLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">integration_Testing.SideBarTest#testResetLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>problem_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">integration_Testing.SideBarTest#testResetLink</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>standard_user</td><td>secret_sauce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

@@ -11,7 +11,7 @@ import java.util.List;  // For handling lists of elements
 
 public class HomeProductCartTests extends BaseTest {
 
-    HomePage home = new HomePage(driver);
+//    HomePage home = new HomePage(driver);
     // Test 1: Open detail page of first product, verify details, and add to cart
     @Test(priority = 1)
     public void ViewDetailPageAndAddFirstProduct(String username, String password) {
