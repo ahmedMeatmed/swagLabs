@@ -1,4 +1,4 @@
-package TestCases;
+package integration_Testing;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

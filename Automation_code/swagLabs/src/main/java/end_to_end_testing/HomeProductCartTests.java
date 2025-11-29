@@ -8,6 +8,7 @@ import java.util.List;  // For handling lists of elements
 
 // Test class for Home page product and cart functionalities
 @Test(dataProvider = "users", dataProviderClass = DataProviders.class)
+
 public class HomeProductCartTests extends BaseTest {
 
     HomePage home = new HomePage(driver);
