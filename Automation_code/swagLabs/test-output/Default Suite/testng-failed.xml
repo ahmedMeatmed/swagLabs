@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SideBarTest.java(failed)">
+    <classes>
+      <class name="integration_Testing.SideBarTest">
+        <methods>
+          <include name="testLogOutLink" invocation-numbers="0"/>
+          <include name="closeMenu"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="testSideBarList" invocation-numbers="0 1"/>
+          <include name="closeBrowser"/>
+          <include name="openMenu"/>
+        </methods>
+      </class> <!-- integration_Testing.SideBarTest -->
+    </classes>
+  </test> <!-- SideBarTest.java(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
